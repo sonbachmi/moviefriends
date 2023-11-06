@@ -1,0 +1,8 @@
+@import 'variables';
+
+.MovieListingPage {
+  padding: 2rem 6rem;
+  @media #{$mobile} {
+    padding: 1em;
+  }
+}

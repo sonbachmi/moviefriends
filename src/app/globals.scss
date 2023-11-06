@@ -1,0 +1,53 @@
+@import 'variables';
+@import 'vars';
+
+:root {
+  @include scrollbar()
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+// 1. Your custom variables and variable overwrites.
+$global-link-color: white;
+// 2. Import default variables and available mixins.
+$global-primary-background: #39a4a4;
+@import "uikit/src/scss/variables-theme.scss";
+@import "uikit/src/scss/mixins-theme.scss";
+
+// 3. Your custom mixin overwrites.
+//@mixin hook-card() { color: #000; }
+
+// 4. Import UIkit.
+@import "uikit/src/scss/uikit-theme.scss";

@@ -1,0 +1,8 @@
+GET https://api.themoviedb.org/3/discover/movie?api_key=cac4a8e71ba3acbcafe882c8c0ef547a
+Accept: application/json
+
+###
+GET https://api.themoviedb.org/3/configuration?api_key=cac4a8e71ba3acbcafe882c8c0ef547a
+Accept: application/json
+
+###

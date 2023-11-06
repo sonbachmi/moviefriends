@@ -1,0 +1,28 @@
+@import '../variables';
+
+.register {
+  padding: 2rem 6rem;
+  @media #{$mobile} {
+    padding: 1em;
+  }
+
+  form {
+    width: 24em;
+    @media #{$mobile} {
+      padding: 1em;
+    }
+
+    .notes {
+      padding: 1em;
+      font-weight: 500;
+
+      code {
+        font-weight: bold;
+      }
+
+      a {
+        color: inherit;
+      }
+    }
+  }
+}

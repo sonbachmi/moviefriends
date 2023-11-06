@@ -1,0 +1,108 @@
+@import '../../variables';
+
+.MoviePage {
+  width: 100%;
+
+  header {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: var(--color-dark-primary);
+    display: flex;
+    gap: 0 2em;
+    padding: 2em 3em;
+
+    @media #{$mobile} {
+      padding: 1em;
+      flex-direction: column;
+    }
+
+    .backdrop {
+      opacity: .2;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      pointer-events: none;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        //object-position: center;
+      }
+    }
+
+    .poster {
+      width: min(20em, 30%);
+      overflow: hidden;
+      flex: 0 0 auto;
+
+      @media #{$mobile} {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .meta {
+      color: white;
+
+      .title {
+        h1 {
+          color: white;
+          margin-bottom: 0;
+        }
+      }
+
+      .release-date {
+      }
+
+      .genres {
+        margin: 1em 0;
+        display: flex;
+        gap: 1em;
+
+        .genre {
+          color: var(--color-text);
+          background: white;
+          font-weight: bold;
+        }
+      }
+
+      .overview {
+        max-width: min(70%, 70em);
+      }
+
+      .popularity {
+        margin: 2em 0;
+        display: flex;
+        align-items: center;
+        gap: 0 .5em;
+
+        .label {
+          //text-transform: uppercase;
+        }
+
+        .value {
+          font-size: 1em;
+        }
+      }
+
+      .imdb {
+        a {
+          width: 5em;
+          height: 4em;
+          display: block;
+          background: url(/img/imdb-logo.svg) no-repeat center / 100%;
+        }
+      }
+    }
+  }
+}

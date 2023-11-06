@@ -1,0 +1,46 @@
+@import '../variables';
+
+.Search {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 8em;
+  width: 100%;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  padding: 2em 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media #{$mobile} {
+    padding: 1em;
+  }
+
+  .close {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    @media #{$mobile} {
+      top: .5em;
+      right: .5em;
+    }
+
+    button {
+      width: 2em;
+      height: 2em;
+      border: none;
+      background: no-repeat url(/img/close.svg) center / 100%;
+      cursor: pointer;
+      transition: transform .3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .message {
+    padding: 1em;
+  }
+}

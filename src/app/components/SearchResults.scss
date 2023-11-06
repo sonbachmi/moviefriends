@@ -1,0 +1,50 @@
+@import '../variables';
+
+.SearchResults {
+  width: min(40em, 70%);
+  display: flex;
+  flex-direction: column;
+  gap: 0 1em;
+
+  @media #{$mobile} {
+    width: 100%;
+  }
+
+  .result {
+    display: flex;
+    gap: 0 .5em;
+    color: var(--color-text);
+    text-decoration: none;
+    padding: .5em;
+    border-bottom: 1px solid #ccc;
+
+    .poster {
+      width: 2em;
+      height: 4em;
+      display: flex;
+      flex: 0 0 auto;
+      padding-top: .4em;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        //object-position: center;
+      }
+    }
+
+    .meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0 1em;
+
+      .title {
+        font-weight: 500;
+      }
+
+      .overview {
+        font-size: .6em;
+      }
+    }
+  }
+}

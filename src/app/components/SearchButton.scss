@@ -1,0 +1,12 @@
+.SearchButton {
+  button {
+    width: 2em; height: 2em;
+    border: none;
+    background: no-repeat url(/img/search.svg) center / 100%;
+    cursor: pointer;
+    transition: transform .3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

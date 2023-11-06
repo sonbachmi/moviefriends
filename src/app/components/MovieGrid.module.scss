@@ -1,0 +1,14 @@
+@import '../variables';
+
+.MovieGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: repeat(auto-fill, auto);
+  gap: 1em;
+  @media #{$mobile} {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+}
