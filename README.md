@@ -1,9 +1,11 @@
 # MovieFriends
+
 Author: Son Nguyen son@bachmi.com
 
 Next.js 14 app to implement job assignment from FFW Agency
 
 ## Prerequisites
+
 Node.js version >=18
 
 ## Getting Started
@@ -14,8 +16,9 @@ From root folder:
 npm install
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the local dev app running. 
-Log in as username `user` and password `user`. 
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the local dev app running.
+Log in as username `user` and password `user`.
 
 Configuration as pulled from version control should be sufficient to run the app.
 
@@ -42,7 +45,7 @@ Registration UI present but no persistence layer, so use fixed credentials for t
 Using Next 13 app router
 
 Custom middleware to restrict access to all public pages by authentication as per requirement.
-Except homepage which provides UI to allow new users to register. 
+Except homepage which provides UI to allow new users to register.
 
 ## Search
 
@@ -63,5 +66,4 @@ npm run test
 ```bash
 npm run build
 ```
-
-A copy has been deployed to Vercel at https://moviefriends.vercel.app
+A copy has been deployed to Vercel at https://son-moviefriends.vercel.app
