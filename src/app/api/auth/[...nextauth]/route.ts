@@ -34,8 +34,7 @@ const authOptions: AuthOptions = {
             if (url.startsWith('/')) {
                 if (url.includes('signin')) url = '/'
                 return `${baseUrl}${url}`
-            }
-            else if (new URL(url).origin === baseUrl) return url
+            } else if (new URL(url).origin === baseUrl) return url
             return baseUrl
         }
     },

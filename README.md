@@ -43,8 +43,8 @@ Registration UI present but no persistence layer, so use fixed credentials for t
 
 Using Next 13 app router
 
-Custom middleware to restrict access to all public pages by authentication as per requirement.
-Except homepage which provides UI to allow new users to register.
+Custom middleware to restrict access to specific routes by authentication as per requirement.
+Except homepage which provides UI to allow new users to register, though no other content is shown.
 
 ## Search
 
