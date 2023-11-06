@@ -16,7 +16,6 @@ From root folder:
 npm install
 npm run dev
 ```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the local dev app running.
 Log in as username `user` and password `user`.
 
