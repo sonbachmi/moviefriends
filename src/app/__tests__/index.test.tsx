@@ -6,7 +6,7 @@ import SearchInput from '../components/SearchInput'
 import Search from '../components/Search'
 
 /**
- * Only test client-side components, due to time vonstraint
+ * Only test client-side components, due to time constraints
  */
 
 describe('Search button', () => {

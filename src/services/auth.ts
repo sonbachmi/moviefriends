@@ -2,12 +2,14 @@
 
 import fs from "fs";
 import path from "path";
+import {fileURLToPath} from "url";
 
 /**
  * Mange user persistence and authentication
  */
 
-const usersDbPath = process.env.USERS_DB_PATH as string ?? path.join(__dirname, 'db', 'users.json')
+const usersDbPath = process.env.USERS_DB_PATH as string ??
+    path.join(path.dirname(fileURLToPath(import.meta.url)), '../../db', 'users.json')
 console.log('Users db path:', usersDbPath)
 
 function getUsers(): User[] {

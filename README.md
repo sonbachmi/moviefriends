@@ -2,13 +2,16 @@
 
 Author: Son Nguyen son@bachmi.com
 
-Next.js 14 app to implement job assignment from FFW Agency
+Next.js 14 TypeScript app to implement job assignment from FFW Agency
 
 ## Prerequisites
 
 Node.js version >=18
 
 ## Getting Started
+
+Copy `/.env.example` file to `.env` or `.env.local`, keeping production variables commented out.
+This is important for the API fetching to work.
 
 From root folder:
 
@@ -17,7 +20,6 @@ npm install
 npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the local dev app running.
-Log in as username `user` and password `user`.
 
 Configuration as pulled from version control should be sufficient to run the app.
 
@@ -37,7 +39,8 @@ Error reported to Next component at current error boundary
 
 - Using Next Auth with custom credentials provider
 - Registration UI submits to backend via Server Action.
-- User data is persisted to JSON flat-file to remove dependency on external database services.
+- User data is persisted to JSON flat-file to remove dependency on external database services. 
+In case the default file location (`/db`) does not work, make sure to point it to a writable location in the environment file as commented.
 
 ## Routing
 
@@ -48,11 +51,12 @@ Except homepage which provides UI to allow new users to register, though no othe
 
 ## Search
 
-UI to search-as-you-type using Server Action
+- UI: search-as-you-type
+- Data fetching: using Server Action
 
 ## Testing
 
-Unit testing Using Jest and React Testing Library per requirement
+Using Jest and React Testing Library per requirement
 
 Only includes client-side components due to time constraints
 
@@ -62,7 +66,8 @@ npm run test
 
 ## Deployment
 
-Copy `.env.example` file to `.env`, enable production variables, set Next Auth URL to actual website URL.
+Copy `.env.example` file to `.env`, enable production variables, set Next Auth URL to actual website URL, 
+and set location of users data file.
 
 ```bash
 npm run build
@@ -70,7 +75,5 @@ npm start
 ```
 Now expose port 3000 to your web server's virtual host setting (probably via a reverse proxy).
 
-A copy has been deployed to Vercel at https://son-moviefriends.vercel.app
-
-Alternative self-hosted copy at https://skm.bjdev.net
+A self-hosted copy has been deployed to https://skm.bjdev.net
 

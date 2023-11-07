@@ -3,8 +3,8 @@
 // import {useFormState} from 'react-dom';
 import {useFormState} from 'react-dom'
 
-import './page.scss'
 import {registerSubmit} from "@/app/actions"
+import './page.scss'
 
 const initialState = {
     error: null,
@@ -55,7 +55,7 @@ export default function RegisterPage() {
                     </div>
                 </div>*/}
                 {state?.error &&
-                    <div className="uk-margin uk-alert-danger error message" uk-alert="true">
+                    <div className="uk-margin uk-alert-danger error message" role="alert" uk-alert="true">
                         {state.message}
                     </div>
                 }
@@ -64,7 +64,7 @@ export default function RegisterPage() {
                         <button type="submit" className="button uk-button uk-button-primary">Register</button>
                     </div>}
                 {state?.id &&
-                    <div className="uk-margin uk-alert-primary success message" uk-alert="true">
+                    <div className="uk-margin uk-alert-primary success message" aria-live="polite" uk-alert="true">
                         Registration successful. <a href="/api/auth/signin">Login</a> now.
                     </div>
                 }
