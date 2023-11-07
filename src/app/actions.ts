@@ -1,6 +1,7 @@
 'use server'
 
 import {fetchApi} from "@/services/tmdb";
+import {createUser} from "@/services/auth";
 
 /**
  * Server Action to search movies by title, keywords using TMDB API
@@ -8,7 +9,6 @@ import {fetchApi} from "@/services/tmdb";
  */
 
 export async function search(query: string) {
-    'use server'
     // console.log('Searching for', query)
     const res: any = await fetchApi(`/search/movie?query=${query}`)
     if (!res.ok) {
@@ -16,4 +16,24 @@ export async function search(query: string) {
         throw new Error('API fetch')
     }
     return res.json()
+}
+
+/**
+ * Server Action to handle user registration form
+ * @param state feedback state
+ * @param formData FormData submitted
+ */
+
+export async function registerSubmit(state: any, formData: FormData) {
+    const username = formData.get('username') as string
+    const password = formData.get('password') as string
+
+    const user:any = createUser({username, password})
+    if (user.error) {
+        return {
+            error: user.error,
+            message: user.message
+        }
+    }
+    return user
 }

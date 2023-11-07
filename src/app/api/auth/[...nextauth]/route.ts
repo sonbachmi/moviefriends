@@ -26,10 +26,10 @@ const authOptions: AuthOptions = {
             }
         })
     ],
-    callbacks: {
+/*    callbacks: {
         async redirect({url, baseUrl}) {
             // Redirect to homepage after signout
-            console.log(baseUrl, url)
+            // console.log(baseUrl, url)
             url = '/'
             if (url.startsWith('/')) {
                 if (url.includes('signin')) url = '/'
@@ -37,7 +37,7 @@ const authOptions: AuthOptions = {
             } else if (new URL(url).origin === baseUrl) return url
             return baseUrl
         }
-    },
+    },*/
     session: {strategy: "jwt"},
     theme: {
         colorScheme: 'dark',

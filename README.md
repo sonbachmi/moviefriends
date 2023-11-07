@@ -35,9 +35,9 @@ Error reported to Next component at current error boundary
 
 ## User Authentication
 
-Using Next Auth with custom credentials provider
-
-Registration UI present but no persistence layer, so use fixed credentials for testing as above.
+- Using Next Auth with custom credentials provider
+- Registration UI submits to backend via Server Action.
+- User data is persisted to JSON flat-file to remove dependency on external database services.
 
 ## Routing
 
@@ -54,7 +54,7 @@ UI to search-as-you-type using Server Action
 
 Unit testing Using Jest and React Testing Library per requirement
 
-Only includes client-side components due to time constraint
+Only includes client-side components due to time constraints
 
 ```bash
 npm run test

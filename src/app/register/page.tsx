@@ -1,55 +1,37 @@
-import {FormEvent} from "react";
+'use client'
+
 // import {useFormState} from 'react-dom';
+import {useFormState} from 'react-dom'
 
 import './page.scss'
-/*
-const iniitialState = {
-    passwordsMatch: true
-}*/
+import {registerSubmit} from "@/app/actions"
+
+const initialState = {
+    error: null,
+    message: null
+}
 
 export default function RegisterPage() {
 
     // const [passwordsMatch, setPasswordsMatch] = useState(true)
-    // const [state, formAction] = useFormState(submit, iniitialState)
+    const [state, formAction] = useFormState(registerSubmit, initialState)
 
-/*
-    function onSubmit(event: FormEvent<HTMLFormElement>) {
-        'use client'
-        event.preventDefault()
-        const form: any = event.target
-        const password = form.elements.password.value
-        const confirm_password = form.elements.confirm_password.value
-        // setPasswordsMatch(!confirm_password || password === confirm_password)
-    }
-*/
-
-    async function submit(formData: FormData) {
-        'use server'
-
-        const username = formData.get('username')
-        const password = formData.get('password')
-        // const confirm_password = formData.get('confirm_password')
-        // prevState.passwordsMatch = password === confirm_password
-        // Ideally persist new user to database
-        // But for now just log it
-        console.log('User created', username, password)
-    }
-
-    function ErrorMessage({message}: { message: string }) {
-        'use client'
-        return <div className="uk-margin uk-alert-primary notes" uk-alert="true">
-            <p>{message}</p>
-        </div>
-    }
-
+    /*
+        function onSubmit(event: FormEvent<HTMLFormElement>) {
+            'use client'
+            event.preventDefault()
+            const form: any = event.target
+            const password = form.elements.password.value
+            const confirm_password = form.elements.confirm_password.value
+            // setPasswordsMatch(!confirm_password || password === confirm_password)
+        }
+    */
     return (
         <div className="register">
-            <form className="uk-form-stacked" action={submit}>
+            <form className="uk-form-stacked" action={formAction}>
                 <div className="uk-margin uk-alert-primary notes" uk-alert="true">
-                    <p>Since persistence layer has not been set up yet, this sample form does not store a new user to
-                        backend.</p>
-                    <p>Instead, <a href="/api/auth/signin">log in</a> with username <code>user</code> and
-                        password <code>user</code></p>
+                    <p>For convenience, you can <a href="/api/auth/signin">log in</a> with username <code>user</code> and
+                        password <code>user</code> without having to register here.</p>
                 </div>
                 <div className="uk-margin">
                     <label className="uk-form-label" htmlFor="username">Username</label>
@@ -65,19 +47,27 @@ export default function RegisterPage() {
                                placeholder="Enter password"/>
                     </div>
                 </div>
-                <div className="uk-margin">
+                {/*                <div className="uk-margin">
                     <label className="uk-form-label" htmlFor="confirm_password">Confirm password</label>
                     <div className="uk-form-controls">
                         <input className="uk-input" name="confirm_password" id="confirm_password" type="password"
                                placeholder="Re-enter password"/>
                     </div>
-                </div>
-{/*                {passwordsMatch ||
-                    <ErrorMessage message="Passwords must match"/>
-                }*/}
-                <div className="uk-margin actions">
-                    <button type="submit" className="button uk-button uk-button-primary">Register</button>
-                </div>
+                </div>*/}
+                {state?.error &&
+                    <div className="uk-margin uk-alert-danger error message" uk-alert="true">
+                        {state.message}
+                    </div>
+                }
+                {!state?.id &&
+                    <div className="uk-margin actions">
+                        <button type="submit" className="button uk-button uk-button-primary">Register</button>
+                    </div>}
+                {state?.id &&
+                    <div className="uk-margin uk-alert-primary success message" uk-alert="true">
+                        Registration successful. <a href="/api/auth/signin">Login</a> now.
+                    </div>
+                }
             </form>
         </div>
     )
