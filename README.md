@@ -62,7 +62,15 @@ npm run test
 
 ## Deployment
 
+Copy `.env.example` file to `.env`, enable production variables, set Next Auth URL to actual website URL.
+
 ```bash
 npm run build
+npm start
 ```
+Now expose port 3000 to your web server's virtual host setting (probably via a reverse proxy).
+
 A copy has been deployed to Vercel at https://son-moviefriends.vercel.app
+
+Alternative self-hosted copy at https://skm.bjdev.net
+
