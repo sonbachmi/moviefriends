@@ -27,7 +27,7 @@ export default function Search({close}: {close: any}) {
         }
     }
     return (
-        <div className="Search" data-testid="search-panel">
+        <div className="Search" aria-modal="true" aria-live="polite" data-testid="search-panel">
             <div className="close">
                 <button onClick={close} aria-label="Close" data-testid="close-button"></button>
             </div>
