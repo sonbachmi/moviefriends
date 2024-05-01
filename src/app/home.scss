@@ -6,3 +6,17 @@
     padding: 1em;
   }
 }
+
+.auth-alert {
+  padding: 1em;
+  font-weight: 500;
+
+  code {
+    font-weight: bold;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}

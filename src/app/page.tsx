@@ -19,7 +19,13 @@ async function fetchMovies() {
 export default async function Home() {
     const session = await getServerSession()
     // Hide this page content if not authenticated
-    if (!session) return null
+    if (!session) return (
+        <div className="uk-margin uk-alert-primary auth-alert" uk-alert="true">
+            <p>To demonstrate resource restriction by authorization, all content is currently hidden to unauthenticated users.</p>
+            <p>You can <a href="/api/auth/signin">log in</a> with username <code>user</code> and
+                password <code>user</code>, or <a href="/register">create an account</a>.</p>
+        </div>
+    )
     const data = await fetchMovies()
     const movies: Movie[] = data.results.map((movieData: MovieData) => {
         return new Movie(movieData)

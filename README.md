@@ -2,7 +2,7 @@
 
 Author: Son Nguyen son@bachmi.com
 
-Next.js 14 TypeScript app to implement job assignment from FFW Agency
+Next.js 14 TypeScript app to demonstrate my expertise in the stack.
 
 ## Prerequisites
 
@@ -58,7 +58,7 @@ Except homepage which provides UI to allow new users to register, though no othe
 
 Using Jest and React Testing Library per requirement
 
-Only includes client-side components due to time constraints
+Only includes client-side components
 
 ```bash
 npm run test
@@ -73,7 +73,13 @@ and set location of users data file.
 npm run build
 npm start
 ```
+On production, it is recommended to launch the app as a managed service, eg. via PM2 like so:
+
+```bash
+pm2 start npm --name "moviefriends" -- start
+```
+
 Now expose port 3000 to your web server's virtual host setting (probably via a reverse proxy).
 
-A self-hosted copy has been deployed to https://skm.bjdev.net
+A self-hosted copy has been deployed to https://moviefriends.bachmi.com
 

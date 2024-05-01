@@ -10,7 +10,7 @@ export default function SearchResults({results}: { results: any }) {
     return (
         <div className="SearchResults">
             {movies.map(movie => {
-                return <a className="result" key={movie.id} href={movie.url} target="_blank">
+                return <a className="result" key={movie.id} href={movie.url}>
                     <div className="poster">
                         {movie.posterPath && <img src={`${imgBaseUrl}/w92${movie.posterPath}`}
                              alt="Poster"/>}

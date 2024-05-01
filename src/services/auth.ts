@@ -17,10 +17,12 @@ function getUsers(): User[] {
         const data = fs.readFileSync(usersDbPath)
         return JSON.parse(data.toString())
     } catch (err: any) {
-        console.log(err)
         if (err.message.includes('no such')) {
             fs.appendFile(usersDbPath, '[]', err => {
+                console.log('Created users data file')
             })
+        } else {
+            console.log(err)
         }
         return []
     }
