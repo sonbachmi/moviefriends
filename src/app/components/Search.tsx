@@ -1,10 +1,10 @@
 'use client'
 
-import {useState} from "react";
+import {useState} from 'react'
 
 import SearchInput from './SearchInput'
 import SearchResults from './SearchResults'
-import {MovieData} from "@/app/models/Movie";
+import {MovieData} from '@/app/models/Movie'
 import {search} from '../actions'
 
 import './Search.scss'

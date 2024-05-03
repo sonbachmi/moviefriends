@@ -1,8 +1,8 @@
 'use server'
 
-import fs from "fs";
-import path from "path";
-import {fileURLToPath} from "url";
+import fs from 'fs'
+import path from 'path'
+import {fileURLToPath} from 'url'
 
 /**
  * Mange user persistence and authentication
@@ -18,7 +18,7 @@ function getUsers(): User[] {
         return JSON.parse(data.toString())
     } catch (err: any) {
         if (err.message.includes('no such')) {
-            fs.appendFile(usersDbPath, '[]', err => {
+            fs.appendFile(usersDbPath, '[]', _err => {
                 console.log('Created users data file')
             })
         } else {
@@ -44,7 +44,7 @@ export async function createUser({username, password}: User): Promise<User|UserE
         username, password
     }
     users.push(user)
-    fs.writeFile(usersDbPath, JSON.stringify(users), err => {})
+    fs.writeFile(usersDbPath, JSON.stringify(users), _err => {})
     return user
 }
 

@@ -1,5 +1,5 @@
-import {Movie} from "@/app/models/Movie";
-import MovieCard from "@/app/components/MovieCard";
+import {Movie} from '@/app/models/Movie'
+import MovieCard from '@/app/components/MovieCard'
 import styles from './MovieGrid.module.scss'
 
 export default function MovieGrid({movies}: { movies: Movie[] }) {

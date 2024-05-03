@@ -1,5 +1,5 @@
-import {Movie} from "@/app/models/Movie";
-import {imgBaseUrl} from "@/services/tmdb";
+import {Movie} from '@/app/models/Movie'
+import {imgBaseUrl} from '@/services/tmdb'
 import './MovieCard.scss'
 export default function MovieCard({movie}: { movie: Movie }) {
     return (

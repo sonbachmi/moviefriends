@@ -1,5 +1,5 @@
 import '../../MovieListingPage.scss'
-import MovieListing from "@/app/components/MovieListing";
+import MovieListing from '@/app/components/MovieListing'
 export default async function UpcomingMoviesByPage({ params }: { params: { page: string } }) {
     return (
         <div className="MovieListingPage">

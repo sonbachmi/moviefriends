@@ -1,7 +1,7 @@
 'use server'
 
-import {fetchApi} from "@/services/tmdb";
-import {createUser} from "@/services/auth";
+import {fetchApi} from '@/services/tmdb'
+import {createUser} from '@/services/auth'
 
 /**
  * Server Action to search movies by title, keywords using TMDB API

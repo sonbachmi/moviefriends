@@ -1,15 +1,15 @@
-import {authenticate} from "@/services/auth"
-import NextAuth from "next-auth"
-import type {AuthOptions} from "next-auth"
-import CredentialsProvider from "next-auth/providers/credentials"
+import {authenticate} from '@/services/auth'
+import NextAuth from 'next-auth'
+import type {AuthOptions} from 'next-auth'
+import CredentialsProvider from 'next-auth/providers/credentials'
 
 const authOptions: AuthOptions = {
     providers: [
         CredentialsProvider({
             name: 'Credentials',
             credentials: {
-                username: {label: "Username", type: "text"},
-                password: {label: "Password", type: "password"}
+                username: {label: 'Username', type: 'text'},
+                password: {label: 'Password', type: 'password'}
             },
 
             async authorize(credentials, req) {
@@ -38,7 +38,7 @@ const authOptions: AuthOptions = {
             return baseUrl
         }
     },*/
-    session: {strategy: "jwt"},
+    session: {strategy: 'jwt'},
     theme: {
         colorScheme: 'dark',
         brandColor: '#39a4a4',

@@ -3,7 +3,7 @@
 // import {useFormState} from 'react-dom';
 import {useFormState} from 'react-dom'
 
-import {registerSubmit} from "@/app/actions"
+import {registerSubmit} from '@/app/actions'
 import './page.scss'
 
 const initialState = {

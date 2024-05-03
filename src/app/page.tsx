@@ -1,10 +1,10 @@
-import {getServerSession} from "next-auth/next"
+import {getServerSession} from 'next-auth/next'
 
-import {Movie, MovieData} from "@/app/models/Movie";
-import MovieGrid from "@/app/components/MovieGrid";
-import {Suspense} from "react";
+import {Movie, MovieData} from '@/app/models/Movie'
+import MovieGrid from '@/app/components/MovieGrid'
+import {Suspense} from 'react'
 
-import {fetchApi} from "@/services/tmdb";
+import {fetchApi} from '@/services/tmdb'
 import './home.scss'
 
 async function fetchMovies() {

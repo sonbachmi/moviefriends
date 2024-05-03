@@ -1,5 +1,5 @@
-import {Movie, MovieData} from "@/app/models/Movie"
-import {imgBaseUrl} from "@/services/tmdb";
+import {Movie, MovieData} from '@/app/models/Movie'
+import {imgBaseUrl} from '@/services/tmdb'
 
 import './SearchResults.scss'
 

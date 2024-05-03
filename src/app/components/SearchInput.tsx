@@ -1,15 +1,15 @@
 'use client'
 
-import {FormEvent, useEffect, useRef, useState} from "react"
+import {FormEvent, useEffect, useRef, useState} from 'react'
 
 import './SearchInput.scss'
 
 export default function SearchInput({onQuery}: { onQuery: any }) {
 
-    const inputRef = useRef<HTMLInputElement>(null);
+    const inputRef = useRef<HTMLInputElement>(null)
     useEffect(() => {
         inputRef.current?.focus()
-    }, []);
+    }, [])
 
     const [query, setQuery] = useState<string>('')
     async function onInput(e: FormEvent<HTMLInputElement>) {

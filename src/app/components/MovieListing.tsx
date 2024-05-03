@@ -1,6 +1,6 @@
-import {fetchApi} from "@/services/tmdb";
-import MovieGrid from "@/app/components/MovieGrid";
-import {Movie, MovieData} from "@/app/models/Movie";
+import {fetchApi} from '@/services/tmdb'
+import MovieGrid from '@/app/components/MovieGrid'
+import {Movie, MovieData} from '@/app/models/Movie'
 import './MovieListing.scss'
 
 async function fetchMovies(category: string, page = 0) {

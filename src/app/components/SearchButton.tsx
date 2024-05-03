@@ -1,9 +1,9 @@
 'use client'
 
-import {createPortal} from "react-dom";
-import {useState} from "react";
+import {createPortal} from 'react-dom'
+import {useState} from 'react'
 
-import Search from "./Search"
+import Search from './Search'
 import './SearchButton.scss'
 
 export default function SearchButton() {

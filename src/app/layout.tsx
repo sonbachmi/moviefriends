@@ -1,13 +1,12 @@
 import type {Metadata} from 'next'
 import {Montserrat} from 'next/font/google'
-import {getServerSession} from "next-auth/next"
-import {headers} from "next/headers"
-
-import Search from './components/Search'
+import {getServerSession} from 'next-auth/next'
+import {headers} from 'next/headers'
+import React from 'react'
 
 import './globals.scss'
 import './layout.scss'
-import SearchButton from "@/app/components/SearchButton";
+import SearchButton from '@/app/components/SearchButton'
 
 const montSerrat = Montserrat({subsets: ['latin']})
 
@@ -20,8 +19,8 @@ export default async function RootLayout({children}: {
     children: React.ReactNode
 }) {
     const session = await getServerSession()
-    const headersList = headers();
-    const path = headersList.get('x-pathname') ?? '';
+    const headersList = headers()
+    const path = headersList.get('x-pathname') ?? ''
     return (
         <html lang="en">
         <body className={montSerrat.className}>

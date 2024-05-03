@@ -1,4 +1,4 @@
-import MovieListing from "@/app/components/MovieListing";
+import MovieListing from '@/app/components/MovieListing'
 import '../MovieListingPage.scss'
 
 export default async function PopularMovies() {

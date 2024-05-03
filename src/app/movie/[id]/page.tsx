@@ -1,5 +1,5 @@
-import {MovieDetails} from "@/app/models/Movie";
-import {fetchApi, imgBaseUrl} from "@/services/tmdb";
+import {MovieDetails} from '@/app/models/Movie'
+import {fetchApi, imgBaseUrl} from '@/services/tmdb'
 import './MoviePage.scss'
 
 const imdbBaseUrl = 'https://www.imdb.com/title'
