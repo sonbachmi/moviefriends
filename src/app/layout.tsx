@@ -3,6 +3,7 @@ import {Montserrat} from 'next/font/google'
 import {getServerSession} from 'next-auth/next'
 import {headers} from 'next/headers'
 import React from 'react'
+import Image from 'next/image'
 
 import './globals.scss'
 import './layout.scss'
@@ -26,7 +27,7 @@ export default async function RootLayout({children}: {
         <body className={montSerrat.className}>
         <header>
             <a className="logo">
-                <img src="/img/movie-friends-logo.png" alt="MovieFriends Logo"/>
+                <Image src="/img/movie-friends-logo.png" width={256} height={198} alt="MovieFriends Logo"/>
             </a>
             <nav>
                 <a href="/" className={path === '/' ? 'active' : ''}>Home</a>
@@ -53,7 +54,7 @@ export default async function RootLayout({children}: {
 
         <footer>
             <a className="logo">
-                <img src="/img/movie-friends-logo.png" alt="MovieFriends Logo"/>
+                <Image src="/img/movie-friends-logo.png" width={256} height={198} alt="MovieFriends Logo"/>
             </a>
             <div className="text">
                 <p>Next.js 14 app. Data provided by TMDB API</p>

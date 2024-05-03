@@ -1,13 +1,16 @@
+import Image from 'next/image'
+
 import {Movie} from '@/app/models/Movie'
-import {imgBaseUrl} from '@/services/tmdb'
+import {imgBaseUrl, imgHeight, imgWidth} from '@/services/tmdb'
 import './MovieCard.scss'
+
 export default function MovieCard({movie}: { movie: Movie }) {
     return (
         <div className="uk-card uk-card-default MovieCard">
             <div className="uk-card-header header">
-                <a className="poater" href={movie.url}>
-                    <img className="" src={`${imgBaseUrl}/original/${movie.posterPath}`}
-                         alt="Poster"/>
+                <a className="poster" href={movie.url}>
+                    <Image src={`${imgBaseUrl}/original/${movie.posterPath}`}
+                         width={imgWidth} height={imgHeight} alt="Poster"/>
                 </a>
                 <div className="meta">
                     <div className={`title${movie.title.length > 35 ? ' small' : ''}`}>

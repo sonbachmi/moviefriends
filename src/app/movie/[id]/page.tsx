@@ -1,5 +1,8 @@
+import Image from 'next/image'
+
 import {MovieDetails} from '@/app/models/Movie'
-import {fetchApi, imgBaseUrl} from '@/services/tmdb'
+import {fetchApi, imgBaseUrl, imgHeight, imgWidth} from '@/services/tmdb'
+
 import './MoviePage.scss'
 
 const imdbBaseUrl = 'https://www.imdb.com/title'
@@ -20,10 +23,12 @@ export default async function MoviePage({ params }: { params: { id: string } }) 
         <div className="MoviePage">
             <header>
                 <div className="backdrop">
-                    <img src={`${imgBaseUrl}/original${movie.backdropPath}`} alt="Backdrop" />
+                    <Image src={`${imgBaseUrl}/original${movie.backdropPath}`}
+                           fill={true} alt="Backdrop" />
                 </div>
                 <div className="poster">
-                    <img src={`${imgBaseUrl}/original${movie.posterPath}`} alt="Poster" />
+                    <Image src={`${imgBaseUrl}/original${movie.posterPath}`}
+                              width={imgWidth} height={imgHeight} alt="Poster" />
                 </div>
                 <div className="meta">
                     <div className="title">

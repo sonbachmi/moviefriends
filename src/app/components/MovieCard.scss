@@ -6,10 +6,10 @@
 
     .poster {
       width: 100%;
-      aspect-ratio: 2;
 
       img {
         width: 100%;
+        aspect-ratio: 96/144;
         object-fit: cover;
       }
     }

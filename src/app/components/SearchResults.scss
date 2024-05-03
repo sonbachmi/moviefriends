@@ -20,7 +20,7 @@
 
     .poster {
       width: 2em;
-      height: 4em;
+      max-height: 4em;
       display: flex;
       flex: 0 0 auto;
       padding-top: .4em;
@@ -28,8 +28,8 @@
 
       img {
         width: 100%;
+        aspect-ratio: 92/138;
         object-fit: cover;
-        //object-position: center;
       }
     }
 

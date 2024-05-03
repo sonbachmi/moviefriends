@@ -23,7 +23,7 @@ export default function SearchInput({onQuery}: { onQuery: any }) {
             onQuery(query)
         }, 500)
         return () => clearTimeout(broadcastQuery)
-    }, [query])
+    }, [query, onQuery])
 
     return (
         <div className="SearchInput">
