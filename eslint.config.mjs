@@ -1,0 +1,13 @@
+export default {
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "semi": [
+      "warn",
+      "never"
+    ],
+    "quotes": [
+      "warn",
+      "single"
+    ]
+  }
+}
