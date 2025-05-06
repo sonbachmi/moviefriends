@@ -1,8 +1,14 @@
-GET https://api.themoviedb.org/3/discover/movie?api_key=cac4a8e71ba3acbcafe882c8c0ef547a
+GET https://api.themoviedb.org/3/search/tv?query=the+residence
 Accept: application/json
+Authorization: Bearer {{tmdbAccessToken}}
 
 ###
-GET https://api.themoviedb.org/3/configuration?api_key=cac4a8e71ba3acbcafe882c8c0ef547a
+GET https://api.themoviedb.org/3/tv/242054
 Accept: application/json
+Authorization: Bearer {{tmdbAccessToken}}
 
 ###
+GET https://api.themoviedb.org/3/tv/242054/season/1
+Accept: application/json
+Authorization: Bearer {{tmdbAccessToken}}
+
